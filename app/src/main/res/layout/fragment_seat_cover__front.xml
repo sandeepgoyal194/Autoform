@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.application.autoform.view.productview.seatcover.SeatCoverFrontPageAdvertiser">
+
+    <com.application.autoform.view.productview.seatcover.custom_layout.AdvertisementBanner
+        android:id="@+id/banner_popular_design"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        custom:title_banner="Popular Design"
+        custom:type="popular" />
+
+    <com.application.autoform.view.productview.seatcover.custom_layout.AdvertisementBanner
+        android:id="@+id/banner_fresh_design"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        custom:title_banner="Fresh Design"
+        custom:type="fresh" />
+
+</LinearLayout>

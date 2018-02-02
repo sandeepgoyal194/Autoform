@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar">
+
+    </include>
+
+    <RelativeLayout
+        android:id="@+id/coverl_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <Spinner
+            android:id="@+id/spinner_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="left"
+            android:spinnerMode="dropdown" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/seat_coverl_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/spinner_sort"
+            android:divider="@null"></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/emptylayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/emptyscreen" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/padding_standard_32dp"
+            android:fontFamily="sans-serif-bold"
+            android:gravity="center_horizontal"
+            android:text="@string/empty_product_list"
+            android:textSize="@dimen/empty_text" />
+
+    </RelativeLayout>
+    <!-- <include
+         android:id="@+id/loading"
+         layout="@layout/loading_layout"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent" />-->
+</LinearLayout>

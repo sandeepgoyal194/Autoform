@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="lightblue" type="color">#FFe3f2fd</item>
+    <item name="lightgrey" type="color">#FFfafafa</item>
+    <item name="lightindigo" type="color">#FFe8eaf6</item>
+    <item name="lightteal" type="color">#dfe1e1</item>
+    <item name="btn_color_teal" type="color">#FFe0f2f1</item>
+    <item name="btn_color_pressed_teal" type="color">#FFbdbdbd</item>
+    <color name="dim_background">#3f212121</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#FF5722</color>
+    <color name="colorPrimaryDark">#E64A19</color>
+
+    <color name="green_background">#00575e</color>
+
+    <color name="subtext">#a1a1a1</color>
+</resources>

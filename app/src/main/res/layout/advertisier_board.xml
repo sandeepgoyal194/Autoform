@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/abc_popup_background_mtrl_mult">
+
+    <RelativeLayout
+        android:id="@+id/heading_adverisement"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ff757575">
+
+        <TextView
+            android:id="@+id/txt_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Popular Design"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_more"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_more_back"
+            android:text="MORE"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/heading_adverisement">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/advertisement_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true" />
+
+        <!--TODO: Need to add Circular Indicator-->
+
+        <!-- <com.application.autoform.pageindicator.CirclePageIndicator
+             android:id="@+id/indicator"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentBottom="true"
+             android:layout_marginBottom="10dp"
+             android:layout_marginLeft="35dp"
+             android:layout_marginRight="75dp"
+             android:padding="10dip"
+             app:fillColor="#FF888888"
+             app:pageColor="#FFE0E0E0"
+             app:radius="5dp"
+             app:strokeColor="#55000000"
+             app:strokeWidth="1dp" />-->
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heading_adverisement"
+        android:scaleType="fitXY"
+        android:src="@drawable/shadow"></ImageView>
+
+    <!--<include
+        android:id="@+id/loading_layout"
+        layout="@layout/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/heading_adverisement" />-->
+</RelativeLayout>

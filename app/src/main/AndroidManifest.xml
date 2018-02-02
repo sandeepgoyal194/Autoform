@@ -1,0 +1,43 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.application.autoform">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".view.dashboard.AutoFormMainActivity">
+
+        </activity>
+
+        <activity android:name=".view.AutoFormSplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.productview.seatcover.SeatCoverFullListActivity">
+
+        </activity>
+        <activity android:name=".view.productview.seatcover.SeatCoverDetailActivity">
+
+        </activity>
+        <activity android:name=".view.cars.CarSelectorActivity">
+
+        </activity>
+        <activity android:name=".view.productview.AutoFromSeatCoverAdvertiserActivity" />
+        <activity android:name=".view.cart.CartActivity" />
+        <activity android:name=".view.cart.ActivityUserFillInfo" />
+        <activity android:name=".view.dealers.DealerLocationFilter"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/product_category"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/products"
+            android:title="Products" />
+    </group>
+
+    <group
+        android:id="@+id/others"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/recommendation"
+            android:title="Recommendation" />
+        <item
+            android:id="@+id/dealers"
+            android:title="Dealers" />
+        <item
+            android:id="@+id/why_autoform"
+            android:title="Why Autoform" />
+
+        <item
+        android:id="@+id/about_us"
+        android:title="About us" />
+        <item
+            android:id="@+id/contact_us"
+            android:title="Contact us" />
+
+    </group>
+    <group
+        android:id="@+id/group_poem"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/poem"
+            android:title="AutoForm Jingle" />
+
+    </group>
+</menu>
