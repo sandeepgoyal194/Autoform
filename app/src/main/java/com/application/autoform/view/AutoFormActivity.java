@@ -1,6 +1,7 @@
 package com.application.autoform.view;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -46,6 +47,12 @@ public abstract class AutoFormActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+    }
+
+    public void setmToolbarColor(int color) {
+        if(mToolbar != null) {
+            mToolbar.setBackgroundColor(color);
+        }
     }
 
     protected void addFrgment(Fragment fragment, String fragmentTag, int containerView) {

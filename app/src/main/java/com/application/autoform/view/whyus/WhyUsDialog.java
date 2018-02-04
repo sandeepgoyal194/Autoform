@@ -35,7 +35,7 @@ public class WhyUsDialog extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.why_us_dialog, container, false);
         getDialog().requestWindowFeature(1);
-        Button closeButton = (Button) view.findViewById(R.id.btn_close);
+        View closeButton = (View) view.findViewById(R.id.btn_close);
         ImageView imageView = (ImageView) view.findViewById(R.id.why_us_image);
         WhyUsPageData whyUsPageData = (WhyUsPageData) getArguments().getSerializable("whyus");
         closeButton.setOnClickListener(new View.OnClickListener() {

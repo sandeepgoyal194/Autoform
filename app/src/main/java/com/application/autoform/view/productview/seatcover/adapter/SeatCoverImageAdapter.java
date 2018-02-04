@@ -3,6 +3,7 @@ package com.application.autoform.view.productview.seatcover.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
@@ -20,6 +21,7 @@ import com.application.autoform.networknew.imageloader.GlideImageLoaderImpl;
 import com.application.autoform.networknew.imageloader.ImageLoader;
 import com.application.autoform.presenter.products.seatcovers.ISubCategoryPresenter;
 import com.application.autoform.presenter.products.seatcovers.SubCategoryPresenterImpl;
+import com.application.autoform.view.productview.PinchZoomImagePreview;
 import com.application.autoform.view.productview.seatcover.ISubCategoryView;
 
 import java.util.ArrayList;
@@ -86,18 +88,28 @@ public class SeatCoverImageAdapter extends PagerAdapter {
         TextView price;
         ISubCategoryPresenter presenter;
 
-        ViewHolder(View itemView) {
+        ViewHolder(final View itemView) {
             productImage = (ImageView) itemView.findViewById(R.id.img_product);
             subCategoryImage = (ImageView) itemView.findViewById(R.id.img_subcategory);
             price = (TextView) itemView.findViewById(R.id.txt_price);
             presenter = new SubCategoryPresenterImpl(this);
+            productImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(itemView.getContext(), PinchZoomImagePreview.class);
+                    i.putExtra("picture_url",majorMinorList.getDesignImage());
+                    itemView.getContext().startActivity(i);
+
+                }
+            });
         }
 
         int getLayoutID() {
             return R.layout.product_image;
         }
-
+        Product.MajorMinorList majorMinorList;
         void setContent(Product.MajorMinorList majorMinorList) {
+            this.majorMinorList = majorMinorList;
             mImageLoader.loadImage(majorMinorList.getDesignImage(), productImage, R.drawable.loading);
             presenter.getSubCategory(majorMinorList.getSubCategory());
 
