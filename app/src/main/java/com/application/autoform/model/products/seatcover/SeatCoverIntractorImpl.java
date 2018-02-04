@@ -31,7 +31,7 @@ public class SeatCoverIntractorImpl implements ISeatCoverIntractor, ISeatCoverLi
     @Override
     public void getSeatCovers(OnSeatCoverDetailLoaded listener, int design) {
         ArrayList<Product> seatCover = SeatCoverManager.getInstance().getSeatCover(design);
-        if (seatCover == null || seatCover.size() == 0) {
+        if (seatCover == null) {
             new SeatCoverListIntractorImpl().getSeatCovers(this);
             mListener = listener;
             mDesign = design;

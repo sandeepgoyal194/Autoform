@@ -21,6 +21,9 @@ public class SeatCoverListPresenterImpl implements ISeatCoverListPresenter, ISea
 
     @Override
     public void setSeatCovers(List<Product> seatCovers) {
+        if(mView == null) {
+            return;
+        }
         mView.setAllDesignSeatCover(seatCovers);
     }
 

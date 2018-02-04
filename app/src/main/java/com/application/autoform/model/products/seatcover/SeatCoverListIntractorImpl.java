@@ -25,6 +25,9 @@ public class SeatCoverListIntractorImpl implements ISeatCoverListIntractor {
             WebServicesWrapper.getInstance().getSeatCovers("ALL", "", new ResponseResolver<ArrayList<Product>>() {
                 @Override
                 public void onSuccess(ArrayList<Product> oldSeatCovers, Response response) {
+                    if(listener == null) {
+                        return;
+                    }
                     listener.setSeatCovers(oldSeatCovers);
                     SeatCoverManager.getInstance().setmSeatCovers(oldSeatCovers);
                 }

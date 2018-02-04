@@ -12,7 +12,9 @@ import com.application.autoform.model.bean.Product;
 import com.application.autoform.presenter.products.seatcovers.FreshDesignSeatCoverPresenterImpl;
 import com.application.autoform.presenter.products.seatcovers.IFreshDesignSeatCoverPresenter;
 import com.application.autoform.presenter.products.seatcovers.IPopularDesignSeatCoverPresenter;
+import com.application.autoform.presenter.products.seatcovers.ISeatCoverListPresenter;
 import com.application.autoform.presenter.products.seatcovers.PopularDesignSeatCoverPresenterImpl;
+import com.application.autoform.presenter.products.seatcovers.SeatCoverListPresenterImpl;
 import com.application.autoform.view.productview.seatcover.custom_layout.AdvertisementBanner;
 
 import java.util.List;
@@ -24,11 +26,13 @@ public class SeatCoverFrontPageAdvertiser extends Fragment implements IFreshDesi
     AdvertisementBanner mFreshDesignBanner;
     IFreshDesignSeatCoverPresenter mFreshDesignSeatCoverPresenter;
     IPopularDesignSeatCoverPresenter mPopularDesignSeatCoverPresenter;
+    ISeatCoverListPresenter mSeatCoverListPresenter;
 
 
     public SeatCoverFrontPageAdvertiser() {
         mFreshDesignSeatCoverPresenter = new FreshDesignSeatCoverPresenterImpl(this);
         mPopularDesignSeatCoverPresenter = new PopularDesignSeatCoverPresenterImpl(this);
+        mSeatCoverListPresenter= new SeatCoverListPresenterImpl(null);
     }
 
     // TODO: Rename and change types and number of parameters
@@ -53,6 +57,7 @@ public class SeatCoverFrontPageAdvertiser extends Fragment implements IFreshDesi
         mPopularDesignBanner = (AdvertisementBanner) view.findViewById(R.id.banner_popular_design);
         mFreshDesignSeatCoverPresenter.getFreshSeatCovers();
         mPopularDesignSeatCoverPresenter.getPopularSeatCover();
+        mSeatCoverListPresenter.getSeatCoverDesignList();
         return view;
     }
 

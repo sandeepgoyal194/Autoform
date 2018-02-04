@@ -102,7 +102,7 @@ public class AdvertisementBannerAdapter extends PagerAdapter {
                 public void onClick(View v) {
                     Intent i = new Intent(v.getContext(), SeatCoverDetailActivity.class);
                     //TODO: make static final this string DESIGN
-                    i.putExtra("DESIGN", cover.getDesignName());
+                    i.putExtra("DESIGN", cover.getDesignID());
                     v.getContext().startActivity(i);
                 }
             });
